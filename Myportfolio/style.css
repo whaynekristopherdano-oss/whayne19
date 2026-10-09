@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --black: #0b0b0b;
+    --dark: #141414;
+    --card: #1c1c1c;
+    --gold: #d4af37;
+    --white: #f5f5f5;
+    --gray: #aaaaaa;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.7;
+}
+
+/* NAVIGATION */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 20px 8%;
+    background: #080808;
+    border-bottom: 1px solid #292929;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.nav-links a {
+    color: var(--white);
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background:
+        radial-gradient(
+            circle at top right,
+            #332b16,
+            transparent 45%
+        ),
+        linear-gradient(135deg, #111, #080808);
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.subtitle,
+.section-label {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.description {
+    color: var(--gray);
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+/* STUDENT INFORMATION */
+.student-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-bottom: 30px;
+}
+
+.student-info small {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.student-info h3 {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: #111;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #f0d778;
+    transform: translateY(-3px);
+}
+
+/* GENERAL SECTIONS */
+.section {
+    padding: 75px 10%;
+    scroll-margin-top: 85px;
+}
+
+.section h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+#portfolio,
+.category-section:nth-of-type(even) {
+    background: var(--dark);
+}
+
+/* CATEGORY CARDS */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card {
+    display: block;
+    background: var(--card);
+    border: 1px solid #303030;
+    border-radius: 8px;
+    padding: 28px;
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px #00000040;
+}
+
+.card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    border-radius: 6px;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+.card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.card-link {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* WORK ITEMS */
+.work-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 22px;
+    margin-bottom: 15px;
+    background: var(--card);
+    border: 1px solid #303030;
+    border-left: 3px solid var(--gold);
+    border-radius: 5px;
+}
+
+.work-item h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.work-item p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.status {
+    color: var(--gold);
+    border: 1px solid #665724;
+    padding: 5px 10px;
+    font-size: 11px;
+    border-radius: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 35px 10%;
+    background: #060606;
+    border-top: 1px solid #292929;
+}
+
+footer h3 {
+    color: var(--gold);
+    margin-bottom: 5px;
+}
+
+footer p {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.copyright {
+    margin: 12px 0;
+}
+
+footer a {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--gold);
+    text-decoration: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        padding: 18px 5%;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 65px 7%;
+    }
+
+    .student-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .section {
+        padding: 55px 7%;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* PROFILE PICTURE */
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #d4af37;
+    display: block;
+    margin-bottom: 25px;
+}
